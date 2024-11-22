@@ -1,0 +1,15 @@
+.header {
+    max-width: 1440px;
+    background-color: #fff;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__logo {
+    height: 26px;
+    width: 94px;
+    padding: 10px 0;
+    justify-content: center;
+}
