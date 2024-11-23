@@ -8,40 +8,50 @@
     <meta name="keywords" content="social media, photos, travel, content" />
     <link rel="stylesheet" href="pages/index.css" />
     <link rel="icon" href="favicon.ico" />
-    <!-- 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>SPOTS</title>
 </head>
 <body>
   <header class="header">
-    <img 
-      class="header__logo"
-      src="./images/logo.png"
-      alt="SPOTS logo"
-    />
-    <div class="header__profile">
+    <div class="header__menubar">
       <img 
-        src="./images/profilepic.png" 
-        alt="" 
-        class="header__profile_image"
+        class="header__menubar_logo"
+        src="./images/logo.png"
+        alt="SPOTS logo"
       />
-      <h1 class="header__profile_name">Bessie Coleman</h1>
-      <p class="header__profile_subtitle">Civil Aviator</p>
-      <div class="header__profile_edit">
-        <img src="./images/pencil.svg" alt="edit pencil button" class="header__profile_edit-image">
-        <p class="header__profile_edit-text">Edit Profile</p>
-      </div>
-      <button class="header__profile_button">
+    </div>
+    <div class="header__profile">
+      <div class="header__profile_container profile">
         <img 
-          src="./images/addpost.svg" 
-          alt="add post button" 
-          class="header__profile_button-image"
+        src="./images/profilepic.png" 
+        alt="profile image" 
+        class="profile__image"
         />
-        <p class="header__profile_button-text">New Post</p>
+        <div class="profile_text">
+          <h1 class="profile__name">Bessie Coleman</h1>
+          <p class="profile__subtitle">Civil Aviator</p>
+          <div class="profile__edit">
+            <img 
+              src="./images/pencil.svg" 
+              alt="edit pencil button" 
+              class="profile__edit_image"
+            />
+            <p class="profile__edit_text">Edit Profile</p>
+          </div>
+        </div>
+      <button class="profile__button">
+        <div class="profile__button_content">
+          <img 
+            src="./images/addpost.svg" 
+            alt="add post button" 
+            class="profile__button_image"
+          />
+          <p class="profile__button_text">New Post</p>
+        </div>
       </button>
+      </div>
     </div>
   </header>
   <main class="content">
