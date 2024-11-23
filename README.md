@@ -1,10 +1,11 @@
 # Project 3: Spots
 
-### Overview  
+### Overview & Skills
 
 * HTML  
 * CSS  
 * Grid Layout
+* Adaptive Web Design
 * Working with design briefs  
   
 **Intro**
