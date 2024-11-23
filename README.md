@@ -1,14 +1,16 @@
 # Project 3: Spots
 
-### Overview  
+### Overview & Skills
 
-* Intro  
-* Figma  
-* Images  
+* HTML  
+* CSS  
+* Grid Layout
+* Adaptive Web Design
+* Working with design briefs  
   
 **Intro**
   
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
+This project is made so all the elements are displayed correctly on popular screen sizes. This project was created from a Figma design brief. Images and fonts were gathered from design brief. 
   
 **Figma**  
   
@@ -16,6 +18,7 @@ This project is made so all the elements are displayed correctly on popular scre
   
 **Images**  
   
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
+Images imported directly from Figma. Images and icons optimized [here](https://tinypng.com/).
   
-Good luck and have fun!
+This project was created for Sprint 3 in Triple Ten Bootcamp. 
+
