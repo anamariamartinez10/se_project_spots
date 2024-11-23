@@ -21,4 +21,7 @@ This project is made so all the elements are displayed correctly on popular scre
 Images imported directly from Figma. Images and icons optimized [here](https://tinypng.com/).
   
 This project was created for Sprint 3 in Triple Ten Bootcamp. 
+<<<<<<< HEAD
 
+=======
+>>>>>>> refs/remotes/origin/main
