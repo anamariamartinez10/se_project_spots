@@ -1,20 +1,18 @@
 .profile {
     display: flex;
-    /* justify-content: space-between; */
     gap: 20px;
     font-family: Poppins, Arial, Helvetica, sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;
     background-color: #FCF5E5;
+    max-width: 1440px;
 }
 
 .profile__image {
     height: 190px;
     width: 190px;
     border-radius: 8px;
-    /* Why are bottom corners not rounded? */
-    padding-bottom: 20px;
 }
 
 .profile__text {
@@ -65,8 +63,7 @@
     border-style: none;
     align-self: flex-end;
     padding: 0;
-    margin-bottom: 20px;
-    /* This needs to stick to the right end above the line */
+    margin-left: auto;
 }
 
 .profile__button:hover {
