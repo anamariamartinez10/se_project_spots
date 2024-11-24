@@ -27,12 +27,16 @@
     line-height: 32px;
     color: #212121;
     padding-bottom: 16px;
+    overflow: hidden;
+    max-lines: 3;
 }
 
 .profile__subtitle {
     color: #212121;
     opacity: .70;
     margin: 0;
+    overflow: hidden;
+    max-lines: 3;
 }
 
 .profile__edit {
