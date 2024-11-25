@@ -13,153 +13,176 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>SPOTS</title>
 </head>
+
 <body>
-  <header class="header">
-      <img 
-        class="header__logo"
-        src="./images/logo.png"
-        alt="SPOTS logo"
-      />
-  </header>
-  <main class="content">
-    <section class="content__profile profile">
-      <img 
-        src="./images/profilepic.png" 
-        alt="profile image" 
-        class="profile__image"
-      />
-      <div class="profile__column">
-        <h1 class="profile__name">Bessie Coleman</h1>
-          <!-- Overflow test case: -->
-          <!-- <h1 class="profile__name">
-            Aliaune Damala Bouga
-            Time Bongo Puru Nacka 
-            Lu Lu Lu Badara Akon Nacka
-            Should end at Akon with ellipsis 
-          </h1> -->
-        <p class="profile__subtitle">Civil Aviator</p>
-          <!-- Overflow test case: -->
-          <!-- <p class="profile__subtitle">Known mononymously as Akon (/ˈeɪkɒn/), is a 
-            Senegalese-American singer, record producer, and 
-            entrepreneur. An influential figure in modern world renown person and
-            more words here, should end at world with ellipsis
-          </p> -->
-        <button class="profile__button_edit">
-          <img 
-            src="./images/pencil.svg" 
-            alt="edit pencil button" 
-            class="profile__edit_image"
-          />
-          Edit Profile
+  <div class="page">
+
+    <header class="header">
+        <img 
+          class="header__logo"
+          src="./images/logo.png"
+          alt="SPOTS logo"
+        />
+    </header>
+
+    <main class="content">
+      <section class="profile page__section">
+        <img 
+          src="./images/profilepic.png" 
+          alt="profile image" 
+          class="profile__image"
+        />
+        <div class="profile__column">
+          <h1 class="profile__name">Bessie Coleman</h1>
+            <!-- Overflow test case: -->
+            <!-- <h1 class="profile__name">
+              Aliaune Damala Bouga
+              Time Bongo Puru Nacka 
+              Lu Lu Lu Badara Akon Nacka
+              Should end at Akon with ellipsis 
+            </h1> -->
+          <p class="profile__subtitle">Civil Aviator</p>
+            <!-- Overflow test case: -->
+            <!-- <p class="profile__subtitle">Known mononymously as Akon (/ˈeɪkɒn/), is a 
+              Senegalese-American singer, record producer, and 
+              entrepreneur. An influential figure in modern world renown person and
+              more words here, should end at world with ellipsis
+            </p> -->
+          <button type="button" class="profile__button_edit">
+            <img 
+              src="./images/pencil.svg" 
+              alt="edit pencil button" 
+              class="profile__edit_image"
+            />
+            Edit Profile
+          </button>
+        </div> 
+        <button type="button" class="profile__button_post">
+            <img 
+              src="./images/addpost.svg" 
+              alt="add post button" 
+              class="profile__button_post-image"
+            />
+            <p class="profile__button_post-text">New Post</p>
         </button>
-      </div> 
-      <button class="profile__button_post">
-          <img 
-            src="./images/addpost.svg" 
-            alt="add post button" 
-            class="profile__button_post-image"
-          />
-          <p class="profile__button_post-text">New Post</p>
-      </button>
-    </section>
-    <section class="content__cards">
-      <div class="content__cards_card card">
-        <img 
-          src="./images/winterhouse.png" 
-          alt="house with snow large black background" 
-          class="card__image"
-        />
-        <div class="card__caption">
-          <p class="card__text">Val Thornens</p>
-          <img 
-            src="./images/like.png" 
-            alt="like heart" 
-            class="card__like"
-          />
-        </div>
-      </div>
-      <div class="content__cards_card card">
-        <img 
-          src="./images/restaurant.png" 
-          alt="restaurant terrace with green awning" 
-          class="card__image"
-        />
-        <div class="card__caption">
-          <p class="card__text">Restaurant terrace</p>
-          <img 
-            src="./images/like.png" 
-            alt="like heart" 
-            class="card__like"
-          />
-        </div>
-      </div>
-      <div class="content__cards_card card">
-        <img 
-          src="./images/cafescene.png" 
-          alt="An outdoor cafe" 
-          class="card__image"
-        />
-        <div class="card__caption">
-          <p class="card__text">An outdoor cafe</p>
-          <img 
-            src="./images/like.png" 
-            alt="like heart" 
-            class="card__like"
-          />
-        </div>
-      </div>
-      <div class="content__cards_card card">
-        <img 
-          src="./images/bridge.png" 
-          alt="A very long bridge, over the forest..." 
-          class="card__image"
-        />
-        <div class="card__caption">
-          <p class="card__text">A very long bridge, over a forest</p>
-          <img 
-            src="./images/like.png" 
-            alt="like heart" 
-            class="card__like"
-          />
-        </div>
-      </div>
-      <div class="content__cards_card card">
-        <img 
-          src="./images/hallway.png" 
-          alt="Tunnel with morning light" 
-          class="card__image"
-        />
-        <div class="card__caption">
-          <p class="card__text">Tunnel with morning light</p>
-          <img 
-            src="./images/like.png" 
-            alt="like heart"  
-            class="card__like"
-          />
-        </div>
-      </div>
-      <div class="content__cards_card card">
-        <img 
-          src="./images/winterlogcabin.png" 
-          alt="Mountain house in the snow" 
-          class="card__image"
-        />
-        <div class="card__caption">
-          <p class="card__text">Mountain house</p>
-          <img 
-            src="./images/like.png" 
-            alt="like heart" 
-            class="card__like"
-          />
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <p class="footer__copyright">
-      2024 &copy; Ana Maria Martinez
-    </p>
-  </footer>
-    
+      </section>
+
+      <section class="cards page__section">
+        <ul class="cards__list">
+
+          <li class="card">
+            <img 
+              src="./images/winterhouse.png" 
+              alt="Val Thornens" 
+              class="card__image"
+            />
+            <div class="card__caption">
+              <p class="card__text">Val Thornens</p>
+              <button type="button" class="card__like">
+                <img 
+                  src="./images/like.png" 
+                  alt="like heart" 
+                />
+              </button>
+            </div>
+          </li>
+
+          <li class="card">
+            <img 
+              src="./images/restaurant.png" 
+              alt="Restaurant terrace" 
+              class="card__image"
+            />
+            <div class="card__caption">
+              <p class="card__text">Restaurant terrace</p>
+              <button type="button" class="card__like">
+                <img 
+                  src="./images/like.png" 
+                  alt="like heart" 
+                />
+              </button>
+            </div>
+          </li>
+
+          <li class="card">
+            <img 
+              src="./images/cafescene.png" 
+              alt="An outdoor cafe" 
+              class="card__image"
+            />
+            <div class="card__caption">
+              <p class="card__text">An outdoor cafe</p>
+              <button type="button" class="card__like">
+                <img 
+                  src="./images/like.png" 
+                  alt="like heart" 
+                />
+              </button>
+            </div>
+          </li>
+
+          <li class="card">
+            <img 
+              src="./images/bridge.png" 
+              alt="A very long bridge, over the forest..." 
+              class="card__image"
+            />
+            <div class="card__caption">
+              <!-- <p class="card__text">A very long bridge, over a forest</p> -->
+              <!-- Overflow test: -->
+              <p class="card__text">A very long bridge, over a forest 
+                semantically testing overflow
+              </p>
+              <button type="button" class="card__like">
+                <img 
+                  src="./images/like.png" 
+                  alt="like heart" 
+                />
+              </button>
+            </div>
+          </li>
+
+          <li class="card">
+            <img 
+              src="./images/hallway.png" 
+              alt="Tunnel with morning light" 
+              class="card__image"
+            />
+            <div class="card__caption">
+              <p class="card__text">Tunnel with morning light</p>
+              <button type="button" class="card__like">
+                <img 
+                  src="./images/like.png" 
+                  alt="like heart" 
+                />
+              </button>
+            </div>
+          </li>
+
+          <li class="card">
+            <img 
+              src="./images/winterlogcabin.png" 
+              alt="Mountain house" 
+              class="card__image"
+            />
+            <div class="card__caption">
+              <p class="card__text">Mountain house</p>
+              <button type="button" class="card__like">
+                <img 
+                  src="./images/like.png" 
+                  alt="like heart" 
+                />
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">
+        2024 &copy; Ana Maria Martinez
+      </p>
+    </footer>
+  </div>
 </body>
 </html>

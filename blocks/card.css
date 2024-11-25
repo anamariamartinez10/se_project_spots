@@ -1,44 +1,37 @@
 .card {
-    /* max-width: 413px;
-    margin: 0 auto; */
-    padding: 20px 0 36px;
-    background-color: #FCF5E5;
-    /* justify-content: center; */
-    display: grid;
-    /* grid-template-areas: 
-        "header header header"
-        "card card card"
-        "card card card"
-        "footer footer footer"; */
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .card__image {
     border-radius: 8px;
     height: 413px;
+    display: block;
 }
 
 .card__caption {
     display: flex;
     justify-content: space-between;
+    max-width: 413px;
+    padding-top: 12px;
 }
 
 .card__text {
-    font-family: Poppins, Arial, Helvetica, sans-serif;
-    font-weight: 500;
     font-size: 20px;
     line-height: 24px;
     background-color: #FCF5E5;
     margin: 0;
     color: #212121;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .card__like {
     opacity: .40;
     height: 20px;
     width: 23px;
+    border-style: none;
 }
 
 .card__like:hover {
