@@ -6,7 +6,11 @@
     font-size: 16px;
     line-height: 16px;
     background-color: #FCF5E5;
-    max-width: 1440px;
+    max-width: 1280px;
+    margin: 0 auto;
+    border-bottom: 1px solid #212121;
+    padding: 34px 0 20px;
+    max-height: 210px;
 }
 
 .profile__image {
@@ -15,10 +19,9 @@
     border-radius: 8px;
 }
 
-.profile__text {
-    justify-content: flex-start;
-    margin: 0;
-    padding: 0;
+.profile__column {
+    display: flex;
+    flex-direction: column;
 }
 
 .profile__name {
@@ -27,9 +30,10 @@
     line-height: 32px;
     color: #212121;
     padding-bottom: 16px;
-    max-width: 420px;
-    max-height: 96px;
+    /* max-width: 420px;
+    max-height: 96px; */
     overflow: hidden;
+    box-sizing: border-box;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -45,6 +49,7 @@
     max-height: 48px;
     overflow: hidden;
     text-overflow: ellipsis;
+    box-sizing: border-box;
     white-space: wrap;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -52,26 +57,22 @@
     -webkit-box-orient: vertical;
 }
 
-.profile__edit {
-    display: flex;
-    gap: 8px;
+.profile__button_edit {
     opacity: .70;
-    /* align-self: end; */
-    /* padding-bottom: auto; */
-}
-
-.profile__edit:hover {
-    opacity: 1.0;
-}
-
-.profile__edit_text {
-    margin: 0;
+    margin-top: auto;
+    margin-right: auto;
+    border-style: none;
+    background-color: #FCF5E5;
     line-height: 16px;
     font-weight: 500;
     font-size: 16px;
 }
 
-.profile__button {
+.profile__button_edit:hover {
+    opacity: 1.0;
+}
+
+.profile__button_post {
     background-color: #212121;
     color: #fff;
     display: flex;
@@ -79,29 +80,24 @@
     border-radius: 8px;
     border-style: none;
     align-self: flex-end;
-    padding: 0;
     margin-left: auto;
+    max-height: 52px;
+    padding: 18px 32px;
+    gap: 8px;
 }
 
-.profile__button:hover {
+.profile__button_post:hover {
     opacity: .80;
 }
 
-.profile__button_content {
-    padding: 18px 32px;
-    display: flex;
-    gap: 8px;
-    margin: 0;
-}
-
-.profile__button_text {
+.profile__button_post-text {
     margin: 0;
     line-height: 16px;
     font-weight: 500;
     font-size: 16px;
 }
 
-.profile__button_image {
+.profile__button_post-image {
     height: 12px;
     width: 12px;
 }

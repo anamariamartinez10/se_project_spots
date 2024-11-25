@@ -22,130 +22,138 @@
       />
   </header>
   <main class="content">
-    <div class="content__profile">
-      <div class="content__profile_container profile">
-        <img 
+    <section class="content__profile profile">
+      <img 
         src="./images/profilepic.png" 
         alt="profile image" 
         class="profile__image"
-        />
-        <div class="profile_text">
-          <!-- <h1 class="profile__name">Bessie Coleman</h1> -->
+      />
+      <div class="profile__column">
+        <h1 class="profile__name">Bessie Coleman</h1>
           <!-- Overflow test case: -->
-          <h1 class="profile__name">
+          <!-- <h1 class="profile__name">
             Aliaune Damala Bouga
             Time Bongo Puru Nacka 
             Lu Lu Lu Badara Akon Nacka
             Should end at Akon with ellipsis 
-          </h1>
-          <!-- <p class="profile__subtitle">Civil Aviator</p> -->
+          </h1> -->
+        <p class="profile__subtitle">Civil Aviator</p>
           <!-- Overflow test case: -->
-          <p class="profile__subtitle">Known mononymously as Akon (/ˈeɪkɒn/), is a 
+          <!-- <p class="profile__subtitle">Known mononymously as Akon (/ˈeɪkɒn/), is a 
             Senegalese-American singer, record producer, and 
             entrepreneur. An influential figure in modern world renown person and
             more words here, should end at world with ellipsis
-          </p>
-          <div class="profile__edit">
-            <img 
-              src="./images/pencil.svg" 
-              alt="edit pencil button" 
-              class="profile__edit_image"
-            />
-            <p class="profile__edit_text">Edit Profile</p>
-          </div>
-      </div>
-      <button class="profile__button">
-        <div class="profile__button_content">
+          </p> -->
+        <button class="profile__button_edit">
+          <img 
+            src="./images/pencil.svg" 
+            alt="edit pencil button" 
+            class="profile__edit_image"
+          />
+          Edit Profile
+        </button>
+      </div> 
+      <button class="profile__button_post">
           <img 
             src="./images/addpost.svg" 
             alt="add post button" 
-            class="profile__button_image"
+            class="profile__button_post-image"
           />
-          <p class="profile__button_text">New Post</p>
-        </div>
+          <p class="profile__button_post-text">New Post</p>
       </button>
+    </section>
+    <section class="content__cards">
+      <div class="content__cards_card card">
+        <img 
+          src="./images/winterhouse.png" 
+          alt="house with snow large black background" 
+          class="card__image"
+        />
+        <div class="card__caption">
+          <p class="card__text">Val Thornens</p>
+          <img 
+            src="./images/like.png" 
+            alt="like heart" 
+            class="card__like"
+          />
+        </div>
       </div>
-    </div>
-    <div class="content__cards">
-      <div class="content__card">
+      <div class="content__cards_card card">
         <img 
-          src="" 
-          alt="" 
-          class="content__card_image"
+          src="./images/restaurant.png" 
+          alt="restaurant terrace with green awning" 
+          class="card__image"
         />
-        <p class="content__card_text">Val Thornens</p>
-        <img 
-          src="" 
-          alt="" 
-          class="content__card_like"
-        />
+        <div class="card__caption">
+          <p class="card__text">Restaurant terrace</p>
+          <img 
+            src="./images/like.png" 
+            alt="like heart" 
+            class="card__like"
+          />
+        </div>
       </div>
-      <div class="content__card">
+      <div class="content__cards_card card">
         <img 
-          src="" 
-          alt="" 
-          class="content__card_image"
+          src="./images/cafescene.png" 
+          alt="An outdoor cafe" 
+          class="card__image"
         />
-        <p class="content__card_text">Val Thornens</p>
-        <img 
-          src="" 
-          alt="" 
-          class="content__card_like"
-        />
+        <div class="card__caption">
+          <p class="card__text">An outdoor cafe</p>
+          <img 
+            src="./images/like.png" 
+            alt="like heart" 
+            class="card__like"
+          />
+        </div>
       </div>
-      <div class="content__card">
+      <div class="content__cards_card card">
         <img 
-          src="" 
-          alt="" 
-          class="content__card_image"
+          src="./images/bridge.png" 
+          alt="A very long bridge, over the forest..." 
+          class="card__image"
         />
-        <p class="content__card_text">Val Thornens</p>
-        <img 
-          src="" 
-          alt="" 
-          class="content__card_like"
-        />
+        <div class="card__caption">
+          <p class="card__text">A very long bridge, over a forest</p>
+          <img 
+            src="./images/like.png" 
+            alt="like heart" 
+            class="card__like"
+          />
+        </div>
       </div>
-      <div class="content__card">
+      <div class="content__cards_card card">
         <img 
-          src="" 
-          alt="" 
-          class="content__card_image"
+          src="./images/hallway.png" 
+          alt="Tunnel with morning light" 
+          class="card__image"
         />
-        <p class="content__card_text">Val Thornens</p>
-        <img 
-          src="" 
-          alt="" 
-          class="content__card_like"
-        />
+        <div class="card__caption">
+          <p class="card__text">Tunnel with morning light</p>
+          <img 
+            src="./images/like.png" 
+            alt="like heart"  
+            class="card__like"
+          />
+        </div>
       </div>
-      <div class="content__card">
+      <div class="content__cards_card card">
         <img 
-          src="" 
-          alt="" 
-          class="content__card_image"
+          src="./images/winterlogcabin.png" 
+          alt="Mountain house in the snow" 
+          class="card__image"
         />
-        <p class="content__card_text">Val Thornens</p>
-        <img 
-          src="" 
-          alt="" 
-          class="content__card_like"
-        />
+        <div class="card__caption">
+          <p class="card__text">Mountain house</p>
+          <img 
+            src="./images/like.png" 
+            alt="like heart" 
+            class="card__like"
+          />
+        </div>
       </div>
-      <div class="content__card">
-        <img 
-          src="" 
-          alt="" 
-          class="content__card_image"
-        />
-        <p class="content__card_text">Val Thornens</p>
-        <img 
-          src="" 
-          alt="" 
-          class="content__card_like"
-        />
-      </div>
-    </div>
+    </section>
   </main>
   <footer class="footer">
     <p class="footer__copyright">

@@ -4,12 +4,12 @@
     margin: 0;
     box-sizing: border-box; 
     display: flex;
-    justify-content: center;
 }
 
 .header__logo {
     height: 26px;
     width: 94px;
     padding: 10px 0;
+    margin: 0 auto;
 }
 
