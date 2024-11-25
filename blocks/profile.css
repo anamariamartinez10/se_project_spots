@@ -1,10 +1,6 @@
 .profile {
     display: flex;
     gap: 20px;
-    font-family: Poppins, Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 16px;
     background-color: #FCF5E5;
     border-bottom: 1px solid #212121;
     padding: 34px 0 20px;
@@ -28,8 +24,6 @@
     line-height: 32px;
     color: #212121;
     padding-bottom: 16px;
-    /* max-width: 420px;
-    max-height: 96px; */
     overflow: hidden;
     box-sizing: border-box;
     text-overflow: ellipsis;
@@ -98,4 +92,43 @@
 .profile__button_post-image {
     height: 12px;
     width: 12px;
+}
+
+@media screen and (max-width: 520px) {
+    .profile {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        max-height: 274px;
+        padding: 0;
+    }
+
+    .profile__image {
+        height: 80px;
+        width: 80px;
+        margin: 20px 120px 12px;
+    }
+
+    .profile__name {
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .profile__subtitle {
+        text-align: center;
+        padding: 0;
+    }
+
+    .profile__button_edit {
+        margin: 32px auto 20px;
+    }
+    
+    .profile__button_post {
+        margin: 0 auto 20px;
+        min-width: 288px;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
 }

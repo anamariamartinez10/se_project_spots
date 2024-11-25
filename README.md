@@ -5,12 +5,12 @@
 * HTML  
 * CSS  
 * Grid Layout
-* Adaptive Web Design
+* Responsive Web Design 
 * Working with design briefs  
   
 **Intro**
   
-This project is made so all the elements are displayed correctly on popular screen sizes. This project was created from a Figma design brief. Images and fonts were gathered from design brief. 
+This project is made so all the elements are displayed correctly on a varity of popular screen sizes. This project was created from a Figma design brief. Images and fonts were gathered from design brief. 
   
 **Figma**  
   
@@ -21,7 +21,4 @@ This project is made so all the elements are displayed correctly on popular scre
 Images imported directly from Figma. Images and icons optimized [here](https://tinypng.com/).
   
 This project was created for Sprint 3 in Triple Ten Bootcamp. 
-<<<<<<< HEAD
-
-=======
->>>>>>> refs/remotes/origin/main
+A deployed version of the project can be found at: https://anamariamartinez10.github.io/se_project_spots/
