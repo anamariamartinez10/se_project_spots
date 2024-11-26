@@ -4,7 +4,6 @@
     background-color: #FCF5E5;
     border-bottom: 1px solid #212121;
     padding: 34px 0 20px;
-    max-height: 210px;
 }
 
 .profile__image {
@@ -22,8 +21,9 @@
     margin: 0;
     font-size: 32px;
     line-height: 32px;
+    max-width: 420px;
     color: #212121;
-    padding-bottom: 16px;
+    margin-bottom: 16px;
     overflow: hidden;
     box-sizing: border-box;
     text-overflow: ellipsis;
@@ -49,7 +49,7 @@
     -webkit-box-orient: vertical;
 }
 
-.profile__button_edit {
+.profile__edit-button {
     opacity: .70;
     margin-top: auto;
     margin-right: auto;
@@ -58,13 +58,14 @@
     line-height: 16px;
     font-weight: 500;
     font-size: 16px;
+    cursor: pointer;
 }
 
-.profile__button_edit:hover {
+.profile__edit-button:hover {
     opacity: 1.0;
 }
 
-.profile__button_post {
+.profile__post-button {
     background-color: #212121;
     color: #fff;
     display: flex;
@@ -76,20 +77,21 @@
     max-height: 52px;
     padding: 18px 32px;
     gap: 8px;
+    cursor: pointer;
 }
 
-.profile__button_post:hover {
+.profile__post-button:hover {
     opacity: .80;
 }
 
-.profile__button_post-text {
+.profile__post-button-text {
     margin: 0;
     line-height: 16px;
     font-weight: 500;
     font-size: 16px;
 }
 
-.profile__button_post-image {
+.profile__post-button-image {
     height: 12px;
     width: 12px;
 }
@@ -100,7 +102,6 @@
         justify-content: center;
         align-items: center;
         gap: 0;
-        max-height: 274px;
         padding: 0;
     }
 
@@ -120,11 +121,11 @@
         padding: 0;
     }
 
-    .profile__button_edit {
+    .profile__edit-button {
         margin: 32px auto 20px;
     }
     
-    .profile__button_post {
+    .profile__post-button {
         margin: 0 auto 20px;
         min-width: 288px;
         max-width: 300px;
