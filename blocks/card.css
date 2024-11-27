@@ -44,5 +44,9 @@
     .card__image {
         max-height: 288px;
     }
+
+    .card__text {
+        font-size: 16px;
+    }
 }
 
