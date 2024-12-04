@@ -22,14 +22,16 @@ This project is made so all the elements are displayed correctly on a varity of 
   
 **Images**  
   
-Images were imported directly from Figma. All images and icons were optimized [here](https://tinypng.com/).
+Images were imported directly from Figma. All images and icons were optimized with [tinify](https://tinypng.com/).
   
 This project was created for Sprint 3 in the Triple Ten Bootcamp. 
-A deployed version of the project can be found at: https://anamariamartinez10.github.io/se_project_spots/
+A deployed version of the project can be found here: [SPOTS home page](https://anamariamartinez10.github.io/se_project_spots/){:target="_blank"}
 
 Plans for improving project: This project will be updated with additional information and Javascript code in the coming Sprints in Triple Ten Bootcamp. 
 
-**Images & Video**  
+### Images & Video  
+
+A video description and walk-through of the project can be found here: [Link to SPOTS video](https://drive.google.com/file/d/1d2t9qON0h8EUUb1FiXnrPtg8CA1rIRuY/view?usp=sharing){:target="_blank"}
 
 The web page display at a width of 1440px:
 ![layoutAt1440](./images/layoutAt1440.png)
@@ -40,4 +42,3 @@ The web page display at a width of 890px:
 The web page display at a width of 320px: 
 ![layoutAt320](./images/layoutAt320.png)
 
-Video for project can be found here: [Link to SPOTS video](https://drive.google.com/file/d/1d2t9qON0h8EUUb1FiXnrPtg8CA1rIRuY/view?usp=sharing)
