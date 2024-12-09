@@ -10,7 +10,7 @@
   
 **Intro**
   
-This site is a social media site for displaying images. Visitors to a profile page can like images using the heart icon.
+This site is a social media platform for displaying images. Visitors to a profile page can like images using the heart icon.
 
 This project is made so all the elements are displayed correctly on a varity of popular screen sizes. This project was created from a Figma design brief. Images and fonts were gathered from design brief. 
 
