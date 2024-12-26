@@ -59,6 +59,33 @@
             />
             <span class="profile__post-button-text">New Post</span>
         </button>
+<!-- Modal Pop Up -->
+          <div class="modal__container modal">
+            <div class="modal__header">
+              <h2 class="modal__title">Edit Profile</h2>
+              <button class="modal__button-close"> 
+                <img src="/images/close.svg" alt="Close Icon" class="modal__button-close">
+              </button>
+            </div>
+            <form action="" class="modal__form">
+              <label for="Name" class="modal__form_label">Name</label>
+              <input 
+                type="text" 
+                name="Name"
+                class="modal__input modal__input-name"
+                placeholder="Bessie Coleman"
+              />
+              <label for="Description" class="modal__form_label">Description</label>
+              <input 
+                type="text" 
+                name="Description"
+                class="modal__input modal__input-description"
+                placeholder="Aviator"
+              />
+              <button class="modal__button-save">Save</button>
+            </form>
+          </div>
+
       </section>
       <section class="cards page__section">
         <ul class="cards__list">
