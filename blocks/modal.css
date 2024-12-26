@@ -1,3 +1,11 @@
+.modal {
+    visibility: hidden;
+}
+
+.modal_opened {
+    visibility: visible;
+}
+
 .modal__container {
     position: fixed;
     background-color: #fff;
