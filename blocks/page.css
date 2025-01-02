@@ -12,7 +12,7 @@
     background-color: #FCF5E5; 
 }
 
-.page__overlay {
+/* .page__overlay {
     background-color: #212121;
     z-index: 4;
     position: fixed;
@@ -20,4 +20,4 @@
     height: 100%;
     opacity: .4;
     visibility: hidden;
-}
+} */

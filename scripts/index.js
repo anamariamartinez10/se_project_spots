@@ -11,7 +11,8 @@ const initialCards = [{name: "Running photo by Martins Zemlickis", link: "https:
 
 const profileEditButton = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
-const page = document.querySelector(".page");
+// const page = document.querySelector(".page"); 
+// I need to figure out the overlay
 
 function openModal() {
     editProfileModal.classList.add("modal_opened");
@@ -19,4 +20,10 @@ function openModal() {
 
 profileEditButton.addEventListener("click", openModal);
 
+const closeProfileModal = document.querySelector(".modal__button-close");
 
+function closeModal () {
+    editProfileModal.classList.remove("modal_opened");
+}
+
+closeProfileModal.addEventListener("click", closeModal);
