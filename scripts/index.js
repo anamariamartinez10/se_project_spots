@@ -9,12 +9,14 @@ const initialCards = [{name: "Running photo by Martins Zemlickis", link: "https:
 
 //  Open Edit Modal on Click:
 
-let edit = document.querySelector(".profile__edit-button");
-let modal = document.querySelector(".modal");
-let page = document.querySelector(".page");
+const profileEditButton = document.querySelector(".profile__edit-button");
+const editProfileModal = document.querySelector("#edit-profile-modal");
+const page = document.querySelector(".page");
 
-edit.addEventListener("click", function openModal() {
-    modal.classList.add("modal__opened");
-    page.classList.add("page__overlay");
-});
+function openModal() {
+    editProfileModal.classList.add("modal_opened");
+}
+
+profileEditButton.addEventListener("click", openModal);
+
 
