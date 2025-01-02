@@ -5,3 +5,16 @@ const initialCards = [{name: "Running photo by Martins Zemlickis", link: "https:
                       {name: "Running photo by Nicolas Hoizey", link: "https://unsplash.com/photos/people-running-on-race-track-poa-Ycw1W8U"}, 
                       {name: "Bread photo by Arturrro", link: "https://unsplash.com/photos/cooking-pot-with-powder-h2CPeqTzaaY"}
                      ]
+
+
+//  Open Edit Modal on Click:
+
+let edit = document.querySelector(".profile__edit-button");
+let modal = document.querySelector(".modal");
+let page = document.querySelector(".page");
+
+edit.addEventListener("click", function openModal() {
+    modal.classList.add("modal__opened");
+    page.classList.add("page__overlay");
+});
+
