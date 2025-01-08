@@ -71,30 +71,52 @@
               </button>
             </div>
             <form action="" class="modal__form">
-              <label for="Name" class="modal__form_label">Name</label>
+              <label for="modal__input-name" class="modal__form_label">Name</label>
               <input 
                 type="text" 
+                id="modal__input-name"
                 name="Name"
-                class="modal__input modal__input-name"
-                placeholder="Bessie Coleman"
+                class="modal__input"
+                placeholder="Type your name"
               />
-              <label for="Description" class="modal__form_label">Description</label>
+              <label for="modal__input-description" class="modal__form_label">Description</label>
               <input 
                 type="text" 
+                id="modal__input-description"
                 name="Description"
-                class="modal__input modal__input-description"
-                placeholder="Aviator"
+                class="modal__input"
+                placeholder="Describe yourself"
               />
               <button class="modal__button-save">Save</button>
             </form>
           </div>
         </div>
-
       </section>
-      <section class="cards page__section">
-        <ul class="cards__list">
 
-          <li class="card">
+      <section class="cards page__section">
+        
+        <ul class="cards__list">
+          <!-- Card Template -->
+          <template id="cardTemplate">
+            <li class="card">
+              <img 
+                src=""
+                alt="" 
+                class="card__image"
+              />
+              <div class="card__caption">
+                <h2 class="card__text"></h2>
+                <button type="button" class="card__like">
+                  <img 
+                    src="./images/like.svg" 
+                    alt="like heart" 
+                  />
+                </button>
+              </div>
+            </li>
+          </template>
+          
+          <!-- <li class="card">
             <img 
               src="./images/winterhouse.png" 
               alt="Val Thornens" 
@@ -152,11 +174,7 @@
               class="card__image"
             />
             <div class="card__caption">
-              <!-- <h2 class="card__text">A very long bridge, over a forest</h2> -->
-              <!-- Overflow test: -->
-              <h2 class="card__text">A very long bridge, over a forest 
-                semantically testing overflow
-              </h2>
+              <h2 class="card__text">A very long bridge, over a forest</h2>
               <button type="button" class="card__like">
                 <img 
                   src="./images/like.svg" 
@@ -198,7 +216,8 @@
                 />
               </button>
             </div>
-          </li>
+          </li> -->
+
         </ul>
       </section>
     </main>
