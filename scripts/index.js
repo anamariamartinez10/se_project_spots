@@ -1,9 +1,9 @@
-const initialCards = [{name: "Running photo by Martins Zemlickis", link: "https://unsplash.com/photos/people-running-on-road-during-daytime-NPFu4GfFZ7E"},
-                      {name: "Bread photo by Wesual Click", link: "https://unsplash.com/photos/cereal-and-three-buns-rsWZ-P9FbQ4"}, 
-                      {name: "Running photo by Jeremy Lapak", link: "https://unsplash.com/photos/person-running-on-top-on-hill-during-daytime-CVvFVQ_-oUg"}, 
-                      {name: "Bread photo by Rodolfo Marques", link: "https://unsplash.com/photos/sliced-breads-GzBO_o0RvEg"}, 
-                      {name: "Running photo by Nicolas Hoizey", link: "https://unsplash.com/photos/people-running-on-race-track-poa-Ycw1W8U"}, 
-                      {name: "Bread photo by Arturrro", link: "https://unsplash.com/photos/cooking-pot-with-powder-h2CPeqTzaaY"}
+const initialCards = [{name: "Daytime road running by Martins Zemlickis", link: "https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cnVubmluZ3xlbnwwfHwwfHx8Mg%3D%3D"},
+                      {name: "Cereal and three buns by Wesual Click", link: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnJlYWR8ZW58MHx8MHx8fDI%3D"}, 
+                      {name: "Daytime hill run by Jeremy Lapak", link: "https://images.unsplash.com/photo-1518214598173-1666bc921d66?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cnVubmluZ3xlbnwwfHwwfHx8Mg%3D%3D"}, 
+                      {name: "Sliced breads by Rodolfo Marques", link: "https://images.unsplash.com/photo-1533782654613-826a072dd6f3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnJlYWR8ZW58MHx8MHx8fDI%3D"}, 
+                      {name: "Track race by Nicolas Hoizey", link: "https://images.unsplash.com/photo-1526676537331-7747bf8278fc?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}, 
+                      {name: "Cooking pot with powder by Arturrro", link: "https://images.unsplash.com/photo-1521471109507-43d61bb345dd?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YnJlYWR8ZW58MHx8MHx8fDI%3D"}
                      ]
 
 const profileEditButton = document.querySelector(".profile__edit-button");
@@ -42,12 +42,15 @@ const cardTemplate = document.querySelector("#cardTemplate");
 const cardsList = document.querySelector(".cards__list");
 
 function getCardElement (data) {
-  const cardElement = cardTemplate.querySelector(".card").content.cloneNode(true);
+  const cardElement = cardTemplate.content
+    .querySelector(".card")
+    .cloneNode(true);
   const cardText = cardElement.querySelector(".card__text");
   const cardImage = cardElement.querySelector(".card__image");
-  const cardAltText = cardImage.alt;
-  cardText.textContent = data.value;
-  cardImage.src = data.src;
+  cardText.textContent = data.name;
+  cardImage.src = data.link;
+  cardImage.alt = data.name;
+  return cardElement;
 }
 
 for(let i = 0; i < initialCards.length; i++) {
@@ -56,42 +59,3 @@ for(let i = 0; i < initialCards.length; i++) {
 }
 
 
-// const submit = document.querySelector(".modal__button-save");
-// profileFormElement.addEventListener('submit', handleProfileFormSubmit);
-
-
-// Render Cards:
-// set the image’s src attribute to the image to the link field of the object
-// set the image’s alt text to the name field of the object
-// set the card’s title to the name field of the object, too
-// return the ready HTML element with the filled-in data
-// Iterate over the cards array using a loop, and in each iteration:
-
-// Pass the array item to your getCardElement() function to create a card element.
-// Use the appropriate built-in DOM method to add this HTML element to the page.
-
-
-// initialCards.forEach() {
-//   
-//   cardText.textContent = initialCards[i].name;
-//   cardImage.src = initialCards[i].link;
-// }
-
-
-
-
-
-// -------
-// const dataArray = [
-//   { title: 'Card 1', imageUrl: 'path/to/image1.jpg' },
-//   { title: 'Card 2', imageUrl: 'path/to/image2.jpg' },
-//   // more items...
-// ];
-
-// dataArray.forEach(item => {
-//   const template = document.querySelector('#card-template').content.cloneNode(true);
-//   template.querySelector('.card__title').textContent = item.title;
-//   template.querySelector('.card__image').src = item.imageUrl; // Assuming you have an <img> with class 'card__image'
-
-//   document.querySelector('.cards').appendChild(template);
-// });
