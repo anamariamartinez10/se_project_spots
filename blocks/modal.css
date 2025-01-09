@@ -35,15 +35,20 @@
 }
 
 .modal__button-close {
-    opacity: .4;
     background-color: #fff;
     border: none;
-    box-sizing: border-box;
+    cursor: pointer;
+    opacity: .4;
 }
 
 .modal__button-close:hover {
     opacity: 1;
-    cursor: pointer;
+}
+
+.modal__close-icon {
+    background-color: #fff;
+    border: none;
+    box-sizing: border-box;
 }
 
 .modal__form {
