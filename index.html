@@ -28,7 +28,7 @@
           class="profile__image"
         />
         <div class="profile__column">
-          <h1 class="profile__name">Bessie Coleman</h1>
+          <h1 class="profile__name">R & B</h1>
             <!-- Overflow test case: -->
             <!-- <h1 class="profile__name">
               Aliaune Damala Bouga
@@ -36,7 +36,7 @@
               Lu Lu Lu Badara Akon Nacka
               Should end at Akon with ellipsis 
             </h1> -->
-          <p class="profile__subtitle">Civil Aviator</p>
+          <p class="profile__subtitle">Running & Bread</p>
             <!-- Overflow test case: -->
             <!-- <p class="profile__subtitle">Known mononymously as Akon (/ˈeɪkɒn/), is a 
               Senegalese-American singer, record producer, and 
@@ -61,13 +61,12 @@
             <span class="profile__post-button-text">New Post</span>
         </button>
         
-<!-- Modal Pop Up -->
+        <!-- Edit Modal Pop Up -->
         <div class="modal" id="edit-profile-modal">
           <div class="modal__container">
             <div class="modal__header">
               <h2 class="modal__title">Edit Profile</h2>
               <button class="modal__button-close"> 
-                <img src="/images/close.svg" alt="Close Icon" class="modal__close-icon">
               </button>
             </div>
             <form class="modal__form">
@@ -91,14 +90,48 @@
             </form>
           </div>
         </div>
+
+        <!-- New Post Modal Pop Up -->
+        <div class="modal" id="new-post-modal">
+          <div class="modal__container">
+            <div class="modal__header">
+              <h2 class="modal__title">New Post</h2>
+              <button class="modal__button-close"> 
+              </button>
+            </div>
+            <form class="modal__form">
+              <label for="modal__input-link" class="modal__label">Image link</label>
+              <input 
+                type="url" 
+                id="modal__input-link"
+                name="Link"
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+              />
+              <label for="modal__input-caption" class="modal__label">Caption</label>
+              <input 
+                type="text" 
+                id="modal__input-caption"
+                name="Caption"
+                class="modal__input"
+                placeholder="Type your caption"
+              />
+              <button class="modal__button-save">Save</button>
+            </form>
+          </div>
+        </div>
       </section>
 
-      <section class="cards page__section">
-        
+      <section class="cards page__section">  
         <ul class="cards__list">
           <!-- Card Template -->
           <template id="cardTemplate">
             <li class="card">
+              <button 
+                class="card__delete"
+                type="button"
+                >
+              </button>
               <img 
                 src=""
                 alt="" 
@@ -106,120 +139,27 @@
               />
               <div class="card__caption">
                 <h2 class="card__text"></h2>
-                <button type="button" class="card__like">
-                  <img 
-                    src="./images/like.svg" 
-                    alt="like heart" 
-                  />
+                <button 
+                  type="button" 
+                  class="card__like"
+                  >
                 </button>
               </div>
             </li>
           </template>
-          
-          <!-- <li class="card">
-            <img 
-              src="./images/winterhouse.png" 
-              alt="Val Thornens" 
-              class="card__image"
-            />
-            <div class="card__caption">
-              <h2 class="card__text">Val Thornens</h2>
-              <button type="button" class="card__like">
-                <img 
-                  src="./images/like.svg" 
-                  alt="like heart" 
-                />
-              </button>
-            </div>
-          </li>
-
-          <li class="card">
-            <img 
-              src="./images/restaurant.png" 
-              alt="Restaurant terrace" 
-              class="card__image"
-            />
-            <div class="card__caption">
-              <h2 class="card__text">Restaurant terrace</h2>
-              <button type="button" class="card__like">
-                <img 
-                  src="./images/like.svg" 
-                  alt="like heart" 
-                />
-              </button>
-            </div>
-          </li>
-
-          <li class="card">
-            <img 
-              src="./images/cafescene.png" 
-              alt="An outdoor cafe" 
-              class="card__image"
-            />
-            <div class="card__caption">
-              <h2 class="card__text">An outdoor cafe</h2>
-              <button type="button" class="card__like">
-                <img 
-                  src="./images/like.svg" 
-                  alt="like heart" 
-                />
-              </button>
-            </div>
-          </li>
-
-          <li class="card">
-            <img 
-              src="./images/bridge.png" 
-              alt="A very long bridge, over the forest..." 
-              class="card__image"
-            />
-            <div class="card__caption">
-              <h2 class="card__text">A very long bridge, over a forest</h2>
-              <button type="button" class="card__like">
-                <img 
-                  src="./images/like.svg" 
-                  alt="like heart" 
-                />
-              </button>
-            </div>
-          </li>
-
-          <li class="card">
-            <img 
-              src="./images/hallway.png" 
-              alt="Tunnel with morning light" 
-              class="card__image"
-            />
-            <div class="card__caption">
-              <h2 class="card__text">Tunnel with morning light</h2>
-              <button type="button" class="card__like">
-                <img 
-                  src="./images/like.svg" 
-                  alt="like heart" 
-                />
-              </button>
-            </div>
-          </li>
-
-          <li class="card">
-            <img 
-              src="./images/winterlogcabin.png" 
-              alt="Mountain house" 
-              class="card__image"
-            />
-            <div class="card__caption">
-              <h2 class="card__text">Mountain house</h2>
-              <button type="button" class="card__like">
-                <img 
-                  src="./images/like.svg" 
-                  alt="like heart" 
-                />
-              </button>
-            </div>
-          </li> -->
-
         </ul>
       </section>
+
+          <!-- Image Modal Pop Up -->
+        <div class="modal" id="preview-modal">
+          <div class="modal__content">
+            <button class="modal__button-close modal__button-close-preview"> 
+            </button>
+            <img src="https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg" alt="" class="modal__image"/>
+            <figcaption class="modal__caption">Bridge with fog</figcaption>
+          </div>
+        </div>
+
     </main>
     <footer class="footer page__section">
       <p class="footer__copyright">
