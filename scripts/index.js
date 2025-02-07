@@ -81,7 +81,9 @@ postFormElement.addEventListener("submit", (evt) => {
 const cardTemplate = document.querySelector("#cardTemplate");
 const cardsList = document.querySelector(".cards__list");
 const previewModal = document.querySelector("#preview-modal");
-const closePreviewModal = previewModal.querySelector(".modal__button-close-preview")
+const modalImage = previewModal.querySelector(".modal__image");
+const modalCaption = previewModal.querySelector(".modal__caption");
+const closePreviewModal = previewModal.querySelector(".modal__button-close-preview");
 
 
 function getCardElement (data) {
@@ -108,6 +110,9 @@ function getCardElement (data) {
 
   cardImage.addEventListener("click", () => {
     openModal(previewModal);
+    modalImage.src = data.link;
+    modalImage.alt = data.name;
+    modalCaption.textContent = data.name;
   })
 
   closePreviewModal.addEventListener("click", () => {
