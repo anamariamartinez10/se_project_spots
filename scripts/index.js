@@ -4,8 +4,7 @@ const initialCards = [{name: "Daytime road running by Martins Zemlickis", link: 
                       {name: "Sliced breads by Rodolfo Marques", link: "https://images.unsplash.com/photo-1533782654613-826a072dd6f3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnJlYWR8ZW58MHx8MHx8fDI%3D"}, 
                       {name: "Track race by Nicolas Hoizey", link: "https://images.unsplash.com/photo-1526676537331-7747bf8278fc?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}, 
                       {name: "Cooking pot with powder by Arturrro", link: "https://images.unsplash.com/photo-1521471109507-43d61bb345dd?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YnJlYWR8ZW58MHx8MHx8fDI%3D"}, 
-                      {name: "Bridge with Fog", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg"}
-                     ]
+                      ]
 
 // Edit Profile Variables:           
 const profileEditButton = document.querySelector(".profile__edit-button");
@@ -45,7 +44,7 @@ profileEditButton.addEventListener("click", () => {
 });
 
 closeProfileModal.addEventListener("click", () => {
-  editProfileModal.classList.remove("modal_opened");
+  closeModal(editProfileModal);
 });
 
 editFormElement.addEventListener("submit", (evt) => {
@@ -64,7 +63,7 @@ profilePostButton.addEventListener("click", () => {
 });
 
 closePostModal.addEventListener("click", () => {
-  newPostModal.classList.remove("modal_opened");
+  closeModal(newPostModal);
 });
 
 postFormElement.addEventListener("submit", (evt) => {
@@ -115,16 +114,18 @@ function getCardElement (data) {
     modalCaption.textContent = data.name;
   })
 
-  closePreviewModal.addEventListener("click", () => {
-    previewModal.classList.remove("modal_opened");
-  });
-
   return cardElement;
 }
+
+closePreviewModal.addEventListener("click", () => {
+  closeModal(previewModal);
+});
 
 initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardsList.prepend(cardElement);
   });
+
+
 
 

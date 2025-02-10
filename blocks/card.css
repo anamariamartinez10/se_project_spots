@@ -63,7 +63,7 @@
 }
 
 .card__like_liked {
-    background: url("/images/likeRed.svg");
+    background: transparent url("/images/likeRed.svg") center no-repeat;
     opacity: 1;
     border-style: none;
     padding: 0;
