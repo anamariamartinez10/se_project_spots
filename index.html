@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Ana Maria Martinez" />
-  <meta name="description" content="Social Media Platform" />
-  <meta name="keywords" content="social media, photos, travel, content" />
-  <link rel="stylesheet" href="pages/index.css" />
-  <link rel="icon" href="favicon.ico" />
-  <title>SPOTS</title>
-</head>
-<body>
-  <div class="page">
-  <!-- <div class="page__overlay"></div> -->
-    <header class="header">
-        <img 
-          class="header__logo"
-          src="./images/logo.png"
-          alt="SPOTS logo"
-        />
-    </header>
-    <main class="content">
-      <section class="profile page__section">
-        <img 
-          src="./images/profilepic.png" 
-          alt="profile image" 
-          class="profile__image"
-        />
-        <div class="profile__column">
-          <h1 class="profile__name">R & B</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ana Maria Martinez" />
+    <meta name="description" content="Social Media Platform" />
+    <meta name="keywords" content="social media, photos, travel, content" />
+    <link rel="stylesheet" href="pages/index.css" />
+    <link rel="icon" href="favicon.ico" />
+    <title>SPOTS</title>
+  </head>
+  <body>
+    <div class="page">
+      <!-- <div class="page__overlay"></div> -->
+      <header class="header">
+        <img class="header__logo" src="./images/logo.png" alt="SPOTS logo" />
+      </header>
+      <main class="content">
+        <section class="profile page__section">
+          <img
+            src="./images/profilepic.png"
+            alt="profile image"
+            class="profile__image"
+          />
+          <div class="profile__column">
+            <h1 class="profile__name">R & B</h1>
             <!-- Overflow test case: -->
             <!-- <h1 class="profile__name">
               Aliaune Damala Bouga
@@ -36,138 +32,128 @@
               Lu Lu Lu Badara Akon Nacka
               Should end at Akon with ellipsis 
             </h1> -->
-          <p class="profile__subtitle">Running & Bread</p>
+            <p class="profile__subtitle">Running & Bread</p>
             <!-- Overflow test case: -->
             <!-- <p class="profile__subtitle">Known mononymously as Akon (/ˈeɪkɒn/), is a 
               Senegalese-American singer, record producer, and 
               entrepreneur. An influential figure in modern world renown person and
               more words here, should end at world with ellipsis
             </p> -->
-          <button type="button" class="profile__edit-button">
-            <img 
-              src="./images/pencil.svg" 
-              alt="edit pencil button" 
-              class="profile__edit-image"
-            />
-            Edit Profile
-          </button>
-        </div> 
-        <button type="button" class="profile__post-button">
-            <img 
-              src="./images/addpost.svg" 
-              alt="add post button" 
+            <button type="button" class="profile__edit-button">
+              <img
+                src="./images/pencil.svg"
+                alt="edit pencil button"
+                class="profile__edit-image"
+              />
+              Edit Profile
+            </button>
+          </div>
+          <button type="button" class="profile__post-button">
+            <img
+              src="./images/addpost.svg"
+              alt="add post button"
               class="profile__post-button-image"
             />
             <span class="profile__post-button-text">New Post</span>
-        </button>
-        
-        <!-- Edit Modal Pop Up -->
-        <div class="modal" id="edit-profile-modal">
-          <div class="modal__container">
-            <div class="modal__header">
-              <h2 class="modal__title">Edit Profile</h2>
-              <button class="modal__button-close"> 
-              </button>
-            </div>
-            <form class="modal__form">
-              <label for="modal__input-name" class="modal__label">Name</label>
-              <input 
-                type="text" 
-                id="modal__input-name"
-                name="Name"
-                class="modal__input"
-                placeholder="Type your name"
-              />
-              <label for="modal__input-description" class="modal__label">Description</label>
-              <input 
-                type="text" 
-                id="modal__input-description"
-                name="Description"
-                class="modal__input"
-                placeholder="Describe yourself"
-              />
-              <button class="modal__button-save">Save</button>
-            </form>
-          </div>
-        </div>
+          </button>
 
-        <!-- New Post Modal Pop Up -->
-        <div class="modal" id="new-post-modal">
-          <div class="modal__container">
-            <div class="modal__header">
-              <h2 class="modal__title">New Post</h2>
-              <button class="modal__button-close"> 
-              </button>
-            </div>
-            <form class="modal__form">
-              <label for="modal__input-link" class="modal__label">Image link</label>
-              <input 
-                type="url" 
-                id="modal__input-link"
-                name="Link"
-                class="modal__input"
-                placeholder="Paste a link to the picture"
-              />
-              <label for="modal__input-caption" class="modal__label">Caption</label>
-              <input 
-                type="text" 
-                id="modal__input-caption"
-                name="Caption"
-                class="modal__input"
-                placeholder="Type your caption"
-              />
-              <button class="modal__button-save">Save</button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <section class="cards page__section">  
-        <ul class="cards__list">
-          <!-- Card Template -->
-          <template id="cardTemplate">
-            <li class="card">
-              <button 
-                class="card__delete"
-                type="button"
-                >
-              </button>
-              <img 
-                src=""
-                alt="" 
-                class="card__image"
-              />
-              <div class="card__caption">
-                <h2 class="card__text"></h2>
-                <button 
-                  type="button" 
-                  class="card__like"
-                  >
-                </button>
+          <!-- Edit Modal Pop Up -->
+          <div class="modal" id="edit-profile-modal">
+            <div class="modal__container">
+              <div class="modal__header">
+                <h2 class="modal__title">Edit Profile</h2>
+                <button class="modal__button-close"></button>
               </div>
-            </li>
-          </template>
-        </ul>
-      </section>
+              <form class="modal__form">
+                <label for="modal__input-name" class="modal__label">Name</label>
+                <input
+                  type="text"
+                  id="modal__input-name"
+                  name="Name"
+                  class="modal__input"
+                  placeholder="Type your name"
+                />
+                <label for="modal__input-description" class="modal__label"
+                  >Description</label
+                >
+                <input
+                  type="text"
+                  id="modal__input-description"
+                  name="Description"
+                  class="modal__input"
+                  placeholder="Describe yourself"
+                />
+                <button class="modal__button-save">Save</button>
+              </form>
+            </div>
+          </div>
 
-          <!-- Image Modal Pop Up -->
+          <!-- New Post Modal Pop Up -->
+          <div class="modal" id="new-post-modal">
+            <div class="modal__container">
+              <div class="modal__header">
+                <h2 class="modal__title">New Post</h2>
+                <button class="modal__button-close"></button>
+              </div>
+              <form class="modal__form">
+                <label for="modal__input-link" class="modal__label"
+                  >Image link</label
+                >
+                <input
+                  type="url"
+                  id="modal__input-link"
+                  name="Link"
+                  class="modal__input"
+                  placeholder="Paste a link to the picture"
+                />
+                <label for="modal__input-caption" class="modal__label"
+                  >Caption</label
+                >
+                <input
+                  type="text"
+                  id="modal__input-caption"
+                  name="Caption"
+                  class="modal__input"
+                  placeholder="Type your caption"
+                />
+                <button class="modal__button-save">Save</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="cards page__section">
+          <ul class="cards__list">
+            <!-- Card Template -->
+            <template id="cardTemplate">
+              <li class="card">
+                <button class="card__delete" type="button"></button>
+                <img src="" alt="" class="card__image" />
+                <div class="card__caption">
+                  <h2 class="card__text"></h2>
+                  <button type="button" class="card__like"></button>
+                </div>
+              </li>
+            </template>
+          </ul>
+        </section>
+
+        <!-- Image Modal Pop Up -->
         <div class="modal" id="preview-modal">
-          <div class="modal__content">
-            <button class="modal__button-close modal__button-close-preview"> 
-            </button>
-            <img src="#" alt="" class="modal__image"/>
+          <div class="modal__container">
+            <button
+              class="modal__button-close modal__button-close-preview"
+            ></button>
+            <img src="#" alt="" class="modal__image" />
             <p class="modal__caption">Bridge with fog</p>
           </div>
         </div>
+      </main>
+      <footer class="footer page__section">
+        <p class="footer__copyright">2024 &copy; Ana Maria Martinez</p>
+      </footer>
+    </div>
 
-    </main>
-    <footer class="footer page__section">
-      <p class="footer__copyright">
-        2024 &copy; Ana Maria Martinez
-      </p>
-    </footer>
-  </div>
-
-  <script defer src="scripts/index.js"></script>
-</body>
+    <script defer src="scripts/index.js"></script>
+  </body>
 </html>
