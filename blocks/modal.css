@@ -21,6 +21,7 @@
   position: relative;
   background-color: #fff;
   border-radius: 8px;
+  max-width: 720px;
 }
 
 .modal__header {
@@ -144,10 +145,6 @@
 }
 
 @media screen and (max-width: 520px) {
-  .modal__container {
-    margin-top: 8.5px;
-  }
-
   .modal__header {
     margin: 12px;
   }
