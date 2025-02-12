@@ -92,6 +92,7 @@ postFormElement.addEventListener("submit", (evt) => {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   closeModal(postFormElement);
+  postFormElement.reset();
 });
 
 // Render Cards:
