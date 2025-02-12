@@ -1,5 +1,6 @@
 .modal {
   visibility: hidden;
+  opacity: 0;
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
   width: 100%;
@@ -10,11 +11,12 @@
   justify-content: center;
   align-items: center;
   z-index: 2;
-  transition: visibility 0.3s, opacity 0.3s ease-in;
+  transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in;
 }
 
 .modal_opened {
   visibility: visible;
+  opacity: 1;
 }
 
 .modal__container {
@@ -95,6 +97,7 @@
   line-height: 20px;
   color: #212121;
   padding: 16px 12px;
+  margin: 0 12px;
   border-radius: 8px;
   border-width: 1px;
   width: 100%;
@@ -125,6 +128,12 @@
 }
 
 /* Preview Modal */
+
+.modal__content {
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+}
 
 .modal__image {
   max-width: 80vw;
@@ -178,6 +187,7 @@
     font-size: 16px;
     max-width: 276px;
     margin: 0;
+    width: 80vw;
   }
 
   .modal__input::placeholder {
@@ -204,5 +214,6 @@
   .modal__image {
     max-width: 90vw;
     max-height: 90vh;
+    object-fit: cover;
   }
 }
