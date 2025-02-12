@@ -122,10 +122,6 @@
 
 /* Preview Modal */
 
-/* .modal__content {
-  position: relative;
-} */
-
 .modal__image {
   max-width: 80vw;
   max-height: 80vh;
@@ -190,10 +186,6 @@
     max-width: 276px;
     max-height: 52px;
   }
-
-  /* .modal__content {
-    margin-top: 8.5px;
-  } */
 
   .modal__button-close {
     top: 12px;
