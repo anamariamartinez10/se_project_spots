@@ -23,7 +23,6 @@
   border-radius: 8px;
   max-width: 720px;
   width: 100%;
-  margin: 134px 10px;
 }
 
 .modal__header {
@@ -98,6 +97,7 @@
   padding: 16px 12px;
   border-radius: 8px;
   border-width: 1px;
+  width: 100%;
   border-color: rgb(33, 33, 33, 0.4);
   cursor: pointer;
 }
@@ -148,6 +148,10 @@
 }
 
 @media screen and (max-width: 520px) {
+  .modal__container {
+    margin: 134px 10px;
+  }
+
   .modal__header {
     margin: 12px;
   }
