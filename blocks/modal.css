@@ -207,13 +207,19 @@
   }
 
   .modal__button-close-preview {
-    top: -40px;
+    top: -48px;
     right: -4px;
   }
 
   .modal__image {
-    max-width: 90vw;
+    max-width: 288px;
     max-height: 90vh;
     object-fit: cover;
+  }
+
+  .modal__caption {
+    font-size: 16px;
+    line-height: 19.2px;
+    font-weight: 500;
   }
 }

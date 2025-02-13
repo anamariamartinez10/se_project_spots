@@ -63,12 +63,7 @@ profileEditButton.addEventListener("click", () => {
   jobInput.value = profileJobElement.textContent;
 });
 
-// closeProfileModal.addEventListener("click", () => {
-//   closeModal(editProfileModal);
-// });
-
 editFormElement.addEventListener("submit", (evt) => {
-  editProfileModal.classList.remove("modal_opened");
   evt.preventDefault();
   profileNameElement.textContent = nameInput.value;
   profileJobElement.textContent = jobInput.value;
@@ -81,12 +76,7 @@ profilePostButton.addEventListener("click", () => {
   openModal(newPostModal);
 });
 
-// closePostModal.addEventListener("click", () => {
-//   closeModal(newPostModal);
-// });
-
 postFormElement.addEventListener("submit", (evt) => {
-  newPostModal.classList.remove("modal_opened");
   evt.preventDefault();
   const inputValues = { name: captionInput.value, link: linkInput.value };
   const cardElement = getCardElement(inputValues);
@@ -137,15 +127,12 @@ function getCardElement(data) {
   return cardElement;
 }
 
-// closePreviewModal.addEventListener("click", () => {
-//   closeModal(previewModal);
-// });
-
 initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardsList.prepend(cardElement);
 });
 
+// Two different ways to manage closing modal:
 // closePreviewModal.addEventListener("click", () => {
 //   closeModal(previewModal);
 // });
