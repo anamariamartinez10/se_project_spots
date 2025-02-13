@@ -52,7 +52,7 @@
   width: 40px;
   height: 40px;
   position: absolute;
-  top: 32px;
+  top: 30px;
   right: 50px;
   margin: 0;
   padding: 0;
@@ -97,7 +97,6 @@
   line-height: 20px;
   color: #212121;
   padding: 16px 12px;
-  margin: 0 12px;
   border-radius: 8px;
   border-width: 1px;
   width: 100%;
@@ -162,7 +161,7 @@
   }
 
   .modal__header {
-    margin: 12px;
+    margin: 12px 12px 0;
   }
 
   .modal__title {
@@ -197,7 +196,7 @@
   .modal__button-save {
     margin: 12px 0;
     padding: 18px 118px;
-    max-width: 276px;
+    width: 100%;
     max-height: 52px;
   }
 

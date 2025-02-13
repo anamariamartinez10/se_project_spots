@@ -67,7 +67,7 @@ editFormElement.addEventListener("submit", (evt) => {
   evt.preventDefault();
   profileNameElement.textContent = nameInput.value;
   profileJobElement.textContent = jobInput.value;
-  closeModal(editFormElement);
+  closeModal(editProfileModal);
 });
 
 // New Post Button:
@@ -81,7 +81,7 @@ postFormElement.addEventListener("submit", (evt) => {
   const inputValues = { name: captionInput.value, link: linkInput.value };
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
-  closeModal(postFormElement);
+  closeModal(newPostModal);
   postFormElement.reset();
 });
 
