@@ -64,7 +64,7 @@
                 <h2 class="modal__title">Edit Profile</h2>
                 <button class="modal__button-close"></button>
               </div>
-              <form class="modal__form">
+              <form class="modal__form" novalidate>
                 <label for="modal__input-name" class="modal__label">Name</label>
                 <input
                   type="text"
@@ -72,7 +72,11 @@
                   name="Name"
                   class="modal__input"
                   placeholder="Type your name"
+                  required
+                  minlength="2"
+                  maxlength="40"
                 />
+                <span id="modal__input-name-error" class="modal__error"></span>
                 <label for="modal__input-description" class="modal__label"
                   >Description</label
                 >
@@ -82,8 +86,13 @@
                   name="Description"
                   class="modal__input"
                   placeholder="Describe yourself"
+                  required
+                  minlength="2"
+                  maxlength="200"
                 />
-                <button class="modal__button-save">Save</button>
+                <span id="modal__input-description-error" class="modal__error">
+                </span>
+                <button class="modal__button-save" disabled>Save</button>
               </form>
             </div>
           </div>
@@ -95,7 +104,7 @@
                 <h2 class="modal__title">New Post</h2>
                 <button class="modal__button-close"></button>
               </div>
-              <form class="modal__form">
+              <form class="modal__form" novalidate>
                 <label for="modal__input-link" class="modal__label"
                   >Image link</label
                 >
@@ -105,7 +114,10 @@
                   name="Link"
                   class="modal__input"
                   placeholder="Paste a link to the picture"
+                  required
                 />
+                <span id="modal__input-link-error" class="modal__error"></span>
+
                 <label for="modal__input-caption" class="modal__label"
                   >Caption</label
                 >
@@ -115,7 +127,14 @@
                   name="Caption"
                   class="modal__input"
                   placeholder="Type your caption"
+                  required
+                  minlength="2"
+                  maxlength="30"
                 />
+                <span
+                  id="modal__input-caption-error"
+                  class="modal__error"
+                ></span>
                 <button class="modal__button-save">Save</button>
               </form>
             </div>
@@ -155,5 +174,6 @@
     </div>
 
     <script defer src="scripts/index.js"></script>
+    <script defer src="scripts/validation.js"></script>
   </body>
 </html>

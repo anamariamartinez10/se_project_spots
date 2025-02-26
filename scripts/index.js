@@ -1,3 +1,5 @@
+// Pass settings objects to the validation functions that are called here
+
 const initialCards = [
   {
     name: "Daytime road running by Martins Zemlickis",
@@ -46,6 +48,7 @@ const postFormElement = newPostModal.querySelector(".modal__form");
 const cardImage = document.querySelector(".card__image");
 const cardText = document.querySelector(".card__text");
 const closePostModal = newPostModal.querySelector(".modal__button-close");
+const cardSaveButton = newPostModal.querySelector(".modal__button-save");
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
@@ -59,6 +62,7 @@ function closeModal(modal) {
 
 profileEditButton.addEventListener("click", () => {
   openModal(editProfileModal);
+  resetValidation(editProfileModal, [nameInput, jobInput]);
   nameInput.value = profileNameElement.textContent;
   jobInput.value = profileJobElement.textContent;
 });
@@ -74,6 +78,7 @@ editFormElement.addEventListener("submit", (evt) => {
 
 profilePostButton.addEventListener("click", () => {
   openModal(newPostModal);
+  disableButton(cardSaveButton);
 });
 
 postFormElement.addEventListener("submit", (evt) => {
@@ -81,6 +86,7 @@ postFormElement.addEventListener("submit", (evt) => {
   const inputValues = { name: captionInput.value, link: linkInput.value };
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
+  disableButton(cardSaveButton);
   closeModal(newPostModal);
   postFormElement.reset();
 });
