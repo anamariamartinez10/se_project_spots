@@ -138,22 +138,23 @@ initialCards.forEach((item) => {
   cardsList.prepend(cardElement);
 });
 
-// Two different ways to manage closing modal:
-// closePreviewModal.addEventListener("click", () => {
-//   closeModal(previewModal);
-// });
+// Close modal on Esc press:
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closeModal(editProfileModal) || closeModal(newPostModal);
+  }
+});
 
-// closePostModal.addEventListener("click", () => {
-//   closeModal(newPostModal);
-// });
+//Close modal when clicking outside modal or modal close buttons:
+const modals = document.querySelectorAll(".modal");
 
-// closeProfileModal.addEventListener("click", () => {
-//   closeModal(editProfileModal);
-// });
-
-const closeButtons = document.querySelectorAll(".modal__button-close");
-
-closeButtons.forEach((button) => {
-  const popup = button.closest(".modal");
-  button.addEventListener("click", () => closeModal(popup));
+modals.forEach((modal) => {
+  modal.addEventListener("click", (evt) => {
+    if (
+      evt.target.classList.contains("modal") ||
+      evt.target.classList.contains("modal__button-close")
+    ) {
+      closeModal(modal);
+    }
+  });
 });
