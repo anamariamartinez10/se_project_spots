@@ -52,17 +52,19 @@ const cardSaveButton = newPostModal.querySelector(".modal__button-save");
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", handleEscape);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", handleEscape);
 }
 
 // Edit Protile Button:
 
 profileEditButton.addEventListener("click", () => {
   openModal(editProfileModal);
-  resetValidation(editProfileModal, [nameInput, jobInput]);
+  resetValidation(editProfileModal, [nameInput, jobInput], settings);
   nameInput.value = profileNameElement.textContent;
   jobInput.value = profileJobElement.textContent;
 });
@@ -78,7 +80,6 @@ editFormElement.addEventListener("submit", (evt) => {
 
 profilePostButton.addEventListener("click", () => {
   openModal(newPostModal);
-  disableButton(cardSaveButton);
 });
 
 postFormElement.addEventListener("submit", (evt) => {
@@ -86,7 +87,7 @@ postFormElement.addEventListener("submit", (evt) => {
   const inputValues = { name: captionInput.value, link: linkInput.value };
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
-  disableButton(cardSaveButton);
+  disableButton(cardSaveButton, settings);
   closeModal(newPostModal);
   postFormElement.reset();
 });
@@ -139,11 +140,12 @@ initialCards.forEach((item) => {
 });
 
 // Close modal on Esc press:
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    closeModal(editProfileModal) || closeModal(newPostModal);
+function handleEscape(evt) {
+  if (evt.key === "Escape") {
+    const openedPopup = document.querySelector(".modal_opened");
+    closeModal(openedPopup);
   }
-});
+}
 
 //Close modal when clicking outside modal or modal close buttons:
 const modals = document.querySelectorAll(".modal");
