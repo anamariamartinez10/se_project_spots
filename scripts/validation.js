@@ -18,7 +18,6 @@ const showInputError = (formElement, inputElement, errorMsg, config) => {
   const errorMsgEl = formElement.querySelector(`#${inputElement.id}-error`);
   errorMsgEl.textContent = errorMsg;
   errorMsgEl.classList.add(config.errorClass);
-  console.log(errorMsgEl);
 };
 
 const hideInputError = (formElement, inputElement, config) => {
@@ -73,7 +72,7 @@ const setEventListeners = (formElement, config) => {
   const buttonElement = formElement.querySelector(config.submitButtonSelector);
   toggleButtonState(inputList, buttonElement, config);
 
-  inputList.forEach((inputElement, config) => {
+  inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", function () {
       checkInputValidity(formElement, inputElement, config);
       toggleButtonState(inputList, buttonElement, config);
