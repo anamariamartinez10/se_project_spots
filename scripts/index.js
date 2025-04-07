@@ -1,3 +1,5 @@
+import { enableValidation, resetValidation, settings } from "./validation.js";
+
 // Pass settings objects to the validation functions that are called here
 
 const initialCards = [
@@ -160,3 +162,5 @@ modals.forEach((modal) => {
     }
   });
 });
+
+enableValidation(settings);

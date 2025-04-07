@@ -80,4 +80,6 @@ const setEventListeners = (formElement, config) => {
   });
 };
 
-enableValidation(settings);
+export { enableValidation };
+export { resetValidation };
+export { settings };
