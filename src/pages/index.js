@@ -1,4 +1,9 @@
-import { enableValidation, resetValidation, settings } from "./validation.js";
+import "./index.css";
+import {
+  enableValidation,
+  resetValidation,
+  settings,
+} from "../scripts/validation.js";
 
 // Pass settings objects to the validation functions that are called here
 
