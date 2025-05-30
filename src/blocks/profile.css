@@ -12,6 +12,35 @@
   border-radius: 8px;
 }
 
+.profile__image-container {
+  position: relative;
+}
+
+.profile__image-btn {
+  position: absolute;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  color: #fff;
+  margin: 0;
+  padding: 12px 39px;
+}
+
+.profile__image-container:hover .profile__image-btn {
+  visibility: visible;
+  cursor: pointer;
+}
+
+.profile__image-btn::after {
+  content: "Edit Avatar";
+}
 .profile__column {
   display: flex;
   flex-direction: column;
@@ -95,6 +124,8 @@
   width: 12px;
 }
 
+/* TODO: FINISH AVATAR/ IMAGE BUTTON STYLING */
+
 @media screen and (max-width: 650px) {
   .profile {
     flex-direction: column;
@@ -104,10 +135,32 @@
     padding: 0;
   }
 
+  .profile__image-container {
+    position: relative;
+  }
+
   .profile__image {
     height: 80px;
     width: 80px;
     margin: 20px 120px 12px;
+  }
+
+  .profile__image-btn {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    height: 23px;
+    width: 23px;
+    bottom: 18px;
+    right: 124px;
+    padding: 12px;
+    visibility: visible;
+    align-items: center;
+    gap: 0;
+  }
+
+  .profile__image-btn::after {
+    content: "";
   }
 
   .profile__name {

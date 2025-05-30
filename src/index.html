@@ -6,7 +6,6 @@
     <meta name="author" content="Ana Maria Martinez" />
     <meta name="description" content="Social Media Platform" />
     <meta name="keywords" content="social media, photos, travel, content" />
-    <link rel="icon" href="favicon.ico" />
     <title>SPOTS</title>
   </head>
   <body>
@@ -21,27 +20,24 @@
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img
-            src="<%=require('./images/profilepic.png')%>"
-            alt="profile image"
-            class="profile__image"
-          />
+          <div class="profile__image-container">
+            <button class="profile__image-btn">
+              <img
+                class="profile__pencil-icon"
+                src="<%=require('./images/white-pencil.svg')%>"
+                alt="Pencil icon"
+              />
+            </button>
+            <img
+              src="<%=require('./images/profilepic.png')%>"
+              alt="profile image"
+              class="profile__image"
+            />
+          </div>
+
           <div class="profile__column">
             <h1 class="profile__name">R & B</h1>
-            <!-- Overflow test case: -->
-            <!-- <h1 class="profile__name">
-              Aliaune Damala Bouga
-              Time Bongo Puru Nacka 
-              Lu Lu Lu Badara Akon Nacka
-              Should end at Akon with ellipsis 
-            </h1> -->
             <p class="profile__subtitle">Running & Bread</p>
-            <!-- Overflow test case: -->
-            <!-- <p class="profile__subtitle">Known mononymously as Akon (/ˈeɪkɒn/), is a 
-              Senegalese-American singer, record producer, and 
-              entrepreneur. An influential figure in modern world renown person and
-              more words here, should end at world with ellipsis
-            </p> -->
             <button type="button" class="profile__edit-button">
               <img
                 src="<%=require('./images/pencil.svg')%>"
@@ -138,7 +134,7 @@
                   id="modal__input-caption-error"
                   class="modal__error"
                 ></span>
-                <button class="modal__button-save">Save</button>
+                <button class="modal__button-save" disabled>Save</button>
               </form>
             </div>
           </div>
@@ -175,5 +171,55 @@
         <p class="footer__copyright">2024 &copy; Ana Maria Martinez</p>
       </footer>
     </div>
+
+    <!-- Avatar Modal -->
+    <div class="modal" id="avatar-modal">
+      <div class="modal__container">
+        <div class="modal__header">
+          <h2 class="modal__title">Edit Profile Avatar</h2>
+          <button class="modal__button-close"></button>
+        </div>
+        <form class="modal__form" id="edit-avatar-form" novalidate>
+          <label for="profile-avatar-input" class="modal__label"
+            >Profile Picture</label
+          >
+          <input
+            type="url"
+            id="profile-avatar-input"
+            name="avatar"
+            class="modal__input"
+            placeholder="Paste the link to an image"
+            required
+          />
+          <span id="profile-avatar-input-error" class="modal__error"></span>
+          <button class="modal__button-save" disabled>Save</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Delete Modal -->
+    <div class="modal" id="delete-modal">
+      <div class="modal__container">
+        <div class="modal__header">
+          <h2 class="modal__title">
+            Are you sure you want to delete this image?
+          </h2>
+          <button class="modal__button-close"></button>
+        </div>
+        <form class="modal__form" id="delete-form" novalidate>
+          <button class="modal__button-save" disabled>Delete</button>
+          <button class="modal__button-save" disabled>Cancel</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
+
+<!-- For tutoring: 
+  2. Work on avatar link, getting it to appear in console
+  4. Edit User Info / Edit Profile Text Content
+  5. Delete modal CSS, how to apply
+  6. Delete modal functionality
+  7. Uncaught ReferenceError: disableButton is not defined
+    at HTMLFormElement.<anonymous> (index.js:163:3)
+(anonymous) @ index.js:163Understand this error -->
