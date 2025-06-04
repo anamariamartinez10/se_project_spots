@@ -2,12 +2,12 @@
 
 ### Overview & Skills
 
-- HTML
-- CSS
-- Grid Layout
+- HTML & CSS
+- Grid Layout / BEM naming conventions
 - Javascript
-- Responsive Web Design
-- Working with design briefs
+- Responsive Web Design : Working with design briefs
+- Webpack / JSON
+- API & Validation
 
 **Intro**
 
@@ -15,7 +15,7 @@ This site is a social media platform for displaying images. Visitors to a profil
 
 This project is made so all the elements are displayed correctly on a varity of popular screen sizes. This project was created from a Figma design brief. Images and fonts were gathered from design brief.
 
-This project was created i
+This project was created iteratively. Initially, I developed the HTML and CSS working off of a design brief. Later, I used Webpack and API to improve the functionality of the project.
 
 **Figma**
 

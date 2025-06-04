@@ -56,7 +56,7 @@
             <span class="profile__post-button-text">New Post</span>
           </button>
 
-          <!-- Edit Modal Pop Up -->
+          <!-- Edit Profile Modal Pop Up -->
           <div class="modal" id="edit-profile-modal">
             <div class="modal__container">
               <div class="modal__header">
@@ -91,7 +91,9 @@
                 />
                 <span id="modal__input-description-error" class="modal__error">
                 </span>
-                <button class="modal__button-save" disabled>Save</button>
+                <button class="modal__button-save" type="submit" disabled>
+                  Save
+                </button>
               </form>
             </div>
           </div>
@@ -199,27 +201,29 @@
 
     <!-- Delete Modal -->
     <div class="modal" id="delete-modal">
-      <div class="modal__container">
+      <div class="modal__container modal__container_delete">
         <div class="modal__header">
-          <h2 class="modal__title">
+          <h2 class="modal__title modal__title_delete">
             Are you sure you want to delete this image?
           </h2>
-          <button class="modal__button-close"></button>
+          <button
+            class="modal__button-close modal__button-close-preview"
+          ></button>
         </div>
         <form class="modal__form" id="delete-form" novalidate>
-          <button class="modal__button-save" disabled>Delete</button>
-          <button class="modal__button-save" disabled>Cancel</button>
+          <div class="modal__button_container">
+            <button
+              class="modal__button-save modal__button-save_delete"
+              disabled
+            >
+              Delete
+            </button>
+            <button class="modal__button-save modal__button-save_cancel">
+              Cancel
+            </button>
+          </div>
         </form>
       </div>
     </div>
   </body>
 </html>
-
-<!-- For tutoring: 
-  2. Work on avatar link, getting it to appear in console
-  4. Edit User Info / Edit Profile Text Content
-  5. Delete modal CSS, how to apply
-  6. Delete modal functionality
-  7. Uncaught ReferenceError: disableButton is not defined
-    at HTMLFormElement.<anonymous> (index.js:163:3)
-(anonymous) @ index.js:163Understand this error -->

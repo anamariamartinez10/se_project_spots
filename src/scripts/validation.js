@@ -83,5 +83,6 @@ const setEventListeners = (formElement, config) => {
 export { enableValidation };
 export { resetValidation };
 export { settings };
+export { disableButton };
 
 // Does buttonElement need to be outside of the setEventListeners fx?

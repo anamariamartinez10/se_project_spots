@@ -7,7 +7,6 @@ class Api {
   }
 
   getAppInfo() {
-    this.getUserInfo();
     return Promise.all([this.getInitialCards(), this.getUserInfo()]);
   }
 
@@ -68,6 +67,19 @@ class Api {
     return fetch(`${this._baseUrl}/cards/${id}`, {
       method: "DELETE",
       headers: this._headers,
+    }).then((res) => {
+      if (res.ok) {
+        return res.json();
+      }
+      return Promise.reject(`Error: ${res.status}`);
+    });
+  }
+
+  addCard(data) {
+    return fetch(`${this._baseUrl}/cards`, {
+      method: "POST",
+      headers: this._headers,
+      body: JSON.stringify(data),
     }).then((res) => {
       if (res.ok) {
         return res.json();
