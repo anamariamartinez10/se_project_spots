@@ -169,7 +169,14 @@
   border: none;
 }
 
-.modal__button-save_cancel {
+.modal__button-cancel {
+  padding: 18px 58px;
+  margin: 32px 0;
+  background-color: #212121;
+  color: #fff;
+  border-radius: 8px;
+  align-self: start;
+  cursor: pointer;
   background-color: #fff;
   color: black;
   border-color: #212121;
