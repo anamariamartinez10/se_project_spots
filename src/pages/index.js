@@ -181,23 +181,14 @@ postFormElement.addEventListener("submit", (evt) => {
     link: linkInput.value,
   };
   const submitBtn = evt.submitter;
-  const cardElement = getCardElement(inputValues);
+  // const cardElement = getCardElement(inputValues);
   submitBtn.textContent = "Saving...";
 
   api
     .addCard(inputValues)
     .then((data) => {
+      const cardElement = getCardElement(data);
       cardsList.prepend(cardElement);
-
-      const likeButton = cardElement.querySelector(".card__like");
-      likeButton.addEventListener("click", (evt) => {
-        handleLike(evt, data._id);
-      });
-
-      const deleteButton = cardElement.querySelector(".card__delete");
-      deleteButton.addEventListener("click", (evt) => {
-        handleDeleteCard(cardElement, data._id);
-      });
 
       disableButton(cardSaveButton, settings);
       closeModal(newPostModal);
@@ -221,12 +212,11 @@ function handleDeleteCard(cardElement, cardId) {
 
 function handleDeleteSubmit(evt) {
   evt.preventDefault();
-  // const deleteBtn = evt.submitter;
   deletePostBtn.textContent = "Deleting...";
 
   api
     .deleteCard(selectedCardId)
-    .then((data) => {
+    .then(() => {
       selectedCard.remove();
       disableButton(cardSaveButton, settings);
       closeModal(deleteModal);
@@ -278,7 +268,7 @@ function getCardElement(data) {
     handleLike(evt, data._id);
   });
 
-  deleteButton.addEventListener("click", (evt) => {
+  deleteButton.addEventListener("click", () => {
     handleDeleteCard(cardElement, data._id);
   });
 
