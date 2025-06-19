@@ -27,20 +27,21 @@ This project was created using a Figma design brief. All fonts, sizing, and styl
 
 Images were imported directly from Figma. All images and icons were optimized with [tinify](https://tinypng.com/).
 
-This project was created for Sprint 3 in the Triple Ten Bootcamp.
-A deployed version of the project can be found here: [SPOTS home page](https://anamariamartinez10.github.io/se_project_spots/)
+This project was created for Sprint 3 through 10 in the Triple Ten Bootcamp. Images can be added to the Spots user page by pasting a URL into the new post modal and adding a description. The images are stored on a server and retrieved using APIs.
 
 Plans for improving project: This project will be updated with additional information and Javascript code in the coming Sprints in Triple Ten Bootcamp.
 
 ### Images & Video
 
-A video description and walk-through of the project can be found here: [Link to SPOTS video](https://drive.google.com/file/d/1d2t9qON0h8EUUb1FiXnrPtg8CA1rIRuY/view?usp=sharing)
+The Sprint 3 iteration of the project, video description and walk-through, can be found here: [Link to SPOTS video](https://drive.google.com/file/d/1d2t9qON0h8EUUb1FiXnrPtg8CA1rIRuY/view?usp=sharing)
 
-The web page display at a width of 1440px:
+The Sprint 9 iteration of the project, video description and walk-through, can be found here: [Link to SPOTS video](https://drive.google.com/file/d/1Ku6w68qhvqUJCbCdmXeU15J7eIWt95mB/view?usp=drive_link)
+
+<!-- The web page display at a width of 1440px:
 ![layoutAt1440](./images/layoutAt1440.png)
 
 The web page display at a width of 890px:
 ![layoutAt890](./images/layoutAt890.png)
 
 The web page display at a width of 320px:
-![layoutAt320](./images/layoutAt320.png)
+![layoutAt320](./images/layoutAt320.png) -->
